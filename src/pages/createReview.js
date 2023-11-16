@@ -5,7 +5,7 @@ import Headline from '../components/Headline';
 import axios from 'axios';
 import { useLocation, useNavigate } from "react-router-dom";
 import { CircleWavyCheck } from 'phosphor-react';
-// import AppConfig from "../config";
+import AppConfig from "../config";
 
 
 
@@ -76,7 +76,7 @@ const Reviews = (props) => {
 
                 <Box as="form" onSubmit={(e) => {
                     e.preventDefault();
-                    axios.post("https://noderatemynft-2aee21b93305.herokuapp.com/reviews",
+                    axios.post(process.env.backendEndpoint || AppConfig.backendEndpoint + "/reviews",
                     {
                         rating: e.target.rating.value,
                         author: e.target.author.value,

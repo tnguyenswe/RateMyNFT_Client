@@ -3,14 +3,14 @@ import SingleCard from './SingleCard';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Grid } from 'theme-ui';
-// import AppConfig from '../../config';
+import AppConfig from '../../config';
 
 const PreviewCards = () => {
     const [queryData, setQueryData] = useState([]);
 
     useEffect(() => {
         const queryDatabase = async () => {
-            const response = await axios.get("https://noderatemynft-2aee21b93305.herokuapp.com/collections");
+            const response = await axios.get(process.env.backendEndpoint || AppConfig.backendEndpoint + "/collections");
             setQueryData(response.data);
         }
         queryDatabase();
