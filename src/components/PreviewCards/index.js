@@ -3,7 +3,7 @@ import SingleCard from './SingleCard';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Grid } from 'theme-ui';
-import AppConfig from '../../config';
+// import AppConfig from '../../config';
 
 const PreviewCards = () => {
     const [queryData, setQueryData] = useState([]);

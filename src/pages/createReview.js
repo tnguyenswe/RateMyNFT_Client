@@ -5,7 +5,7 @@ import Headline from '../components/Headline';
 import axios from 'axios';
 import { useLocation, useNavigate } from "react-router-dom";
 import { CircleWavyCheck } from 'phosphor-react';
-import AppConfig from "../config";
+// import AppConfig from "../config";
 
 
 
